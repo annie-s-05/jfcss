@@ -1,0 +1,1384 @@
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Font%20Awesome/light.css");
+/*Hide Unneeded Sections*/
+.layout-desktop #homeTab .section0 .sectionTitle.sectionTitle-cards.padded-left,
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button,
+#seriesAirTime,
+#similarCollapsible,
+.headerSyncButton, 
+.headerCastButton,
+.btnReplay,
+.cardOverlayButton-br,
+.layout-desktop .detailImageContainer .card,
+.layout-desktop .listViewUserDataButtons,
+.layout-desktop .material-icons.detailButton-icon.more_vert,
+.layout-desktop .material-icons.detailButton-icon.replay,
+.layout-desktop .material-icons.detailButton-icon.theaters,
+.layout-mobile .headerSyncButton,
+.layout-mobile .listViewUserDataButtons,
+.listItemImageButton,
+.itemTags,
+.emby-tab-button[data-index="2"],
+button.emby-tab-button:nth-child(5) {
+  display: none;
+}
+
+.root{
+--hover:#F2EFEA;
+--select:#3B429F;
+--hoverdark:#93918e; 
+--selectdark:#171a3d; 
+--text:#FC7753;
+--core:#101010;
+--gray:#3b3b3b;
+--button:#56A3A6;
+}
+
+/*Scrollbar colour and width*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray) var(--core);
+}
+
+/*Header text colour (not on hover)*/
+.skinHeader,
+html {
+    color: #ddd;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/*Background colour, and core UI */
+.wizardStartForm,
+.ui-corner-all,
+.ui-shadow {
+    background-color: var(--core);
+}
+
+/*Dropdowns*/
+.emby-collapsible-button {
+    border-color: var(--gray);
+    border-color: var(--gray, 0.135);
+}
+
+.layout-tv .skinHeader.semiTransparent {
+    background: none;
+}
+
+.pageTitleWithDefaultLogo {
+    background-image: url(../../assets/img/banner-light.png);
+}
+
+.layout-tv .pageTitleWithDefaultLogo {
+    background-image: url(../../assets/img/icon-transparent.png);
+}
+
+/*Dialog and context menu backgrounds*/
+.backgroundContainer,
+.dialog,
+.nowPlayingPlaylist,
+.nowPlayingContextMenu,
+html {
+    background-color: var(--core);
+}
+
+/*Defaul background*/
+.backgroundContainer.withBackdrop {
+    background-color: var(--core);
+}
+
+/*On hover colour for main options (dashboard, header text etc)*/
+@media (hover: hover) and (pointer: fine) {
+    .paper-icon-button-light:hover:not(:disabled) {
+        color: var(--hover);
+        background-color:var(--hoverdark 0.2);
+    }
+}
+.paper-icon-button-light:active:not(:disabled) {
+    color: var(--select);
+    background-color:var(--selectdark 0.2);
+}
+
+/*Dashboard option on focus*/
+.paper-icon-button-light.show-focus:focus {
+    color: var(--select);
+}
+
+.fab,
+.raised {
+    background: #303030;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.fab:focus,
+.raised:focus {
+    background: #383838;
+}
+
+.button-submit {
+    background: var(--button);
+    color: #fff;
+}
+
+.button-submit:focus {
+    background: var(--select);
+    color: #fff;
+}
+
+.button-delete {
+    background: rgb(213, 111, 111);
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.checkboxLabel {
+    color: var(--button);
+}
+
+.checkboxListLabel,
+.inputLabel,
+.inputLabelUnfocused,
+.paperListLabel,
+.textareaLabelUnfocused {
+    color: #bbb;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.inputLabelFocused,
+.selectLabelFocused,
+.textareaLabelFocused {
+    color: var(--select);
+}
+
+.checkboxOutline {
+    border-color: currentColor;
+}
+
+.collapseContent,
+.formDialogFooter:not(.formDialogFooter-clear),
+.formDialogHeader:not(.formDialogHeader-clear),
+.paperList,
+.visualCardBox {
+    background-color: #202020;
+}
+
+.layout-tv .formDialogFooter:not(.formDialogFooter-clear) {
+    background-color: transparent;
+}
+
+.defaultCardBackground1 {
+    background-color: var(--selectdark);
+}
+
+.defaultCardBackground2 {
+    background-color:  var(--selectdark);
+}
+
+.defaultCardBackground3 {
+    background-color: var(--selectdark)
+}
+
+.defaultCardBackground4 {
+    background-color: var(--selectdark);
+}
+
+.defaultCardBackground5 {
+    background-color: var(--selectdark);
+}
+/*Style for content rating*/
+.mediaInfoItem.mediaInfoOfficialRating {
+    border-radius: 5px;
+    background: var(--hover/ 0.8);
+    color: #303030;
+    border: none;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .layout-desktop .btnPlay {
+    background-color: var(--hover);
+    color: var(--text)  !important;
+    margin-right: 3vw !important;
+    border-radius: 50px !important;
+  }
+  .layout-desktop .btnPlay:hover {
+    background-color: var(--hoverdark);
+    color:var(--text) !important;
+  }
+  .layout-desktop .mainAnimatedPages .paging,
+  .layout-mobile .libraryPage .btnPlay {
+    margin-right: 1em !important;
+  }
+  .layout-desktop .detailPagePrimaryContainer .mainDetailButtons .btnPlay::after {
+    content: attr(title);
+    margin: 1px 11px 0 2px;
+    color: var(--text) ;
+  }
+
+  .layout-desktop .material-icons.detailButton-icon.play_arrow {
+    color: var(--text);
+  }
+  .layout-desktop .btnPlay.detailButton,
+  .layout-mobile .btnPlay.detailButton {
+    flex-direction: row;
+  }
+.cardText-secondary,
+.fieldDescription,
+.guide-programNameCaret,
+.listItem .secondary,
+.nowPlayingBarSecondaryText,
+.programSecondaryTitle,
+.secondaryText {
+    color: var(--text);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.actionsheetDivider {
+    background: #444;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.cardFooter-vibrant .cardText-secondary {
+    color: inherit;
+    opacity: 0.5;
+}
+
+.toast {
+    background: #303030;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.appfooter,
+.playlistSectionButton {
+    background: #202020;
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.itemSelectionPanel {
+    border: 1px solid var(--selectdark);
+}
+
+.selectionCommandsPanel {
+    background: var(--select);
+    color: #fff;
+}
+
+.upNextDialog-countdownText {
+    color: var(--text);
+}
+
+.alphaPickerButton {
+    color: #999;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+}
+
+.alphaPickerButton-selected {
+    color: #fff;
+}
+
+.alphaPickerButton-tv:focus {
+    background-color: var(--button);
+    color: #fff !important;
+}
+
+.detailTableBodyRow-shaded:nth-child(even) {
+    background: #1c1c1c;
+    background: rgba(30, 30, 30, 0.9);
+}
+
+.detailRibbon {
+    background: rgba(32, 32, 32, 0.8);
+}
+
+.layout-tv .detailRibbon {
+    background: none;
+}
+
+.noBackdropTransparency .detailPageSecondaryContainer {
+    background-color: #101010;
+}
+
+.listItem-border {
+    border-color: rgba(34, 34, 34, 0.9) !important;
+}
+
+.listItem:focus {
+    background: #333;
+}
+
+.listItem:hover {
+    background: #242424;
+}
+
+.progressring-spiner {
+    border-color: var(--text);
+}
+
+.button-flat:hover {
+    color: var(--hover);
+}
+
+.button-link {
+    color: var(--text);
+}
+
+.mediaInfoText {
+    color: #ddd;
+    background: rgba(170, 170, 190, 0.2);
+}
+
+.emby-input,
+.emby-textarea {
+    color: inherit;
+    background: #292929;
+    border: 0.16em solid #292929;
+    border-radius: 0.2em;
+}
+
+.emby-input:focus,
+.emby-textarea:focus {
+    border-color: var(--select);
+}
+
+.emby-select-withcolor {
+    color: inherit;
+    background: #292929;
+    border: 0.07em solid #292929;
+}
+
+.emby-select-withcolor > option {
+    color: inherit;
+    background: #222;
+}
+
+.emby-select-withcolor:focus {
+    border-color: var(--selectdark) !important;
+}
+
+.emby-select-tv-withcolor:focus {
+    background-color: var(--select) !important;
+    color:var(--hover) !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+    border-color:var(--button);
+}
+
+.emby-checkbox:focus + span + .checkboxOutline {
+    border-color: var(--hover);
+}
+
+.emby-checkbox:checked + span + .checkboxOutline,
+.itemProgressBarForeground {
+    background-color: var(--button);
+}
+
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline {
+    border-color: var(--selectdark);
+}
+
+.itemProgressBarForeground-recording {
+    background-color: #c76d6e;
+}
+
+/*Metadata for Show when selected*/
+.jstree-default .jstree-wholerow-clicked {
+    background: var(--select)!important;
+}
+/*Metadata for Show when selected*/
+.jstree-wholerow-hovered {
+    background:var(--hover)!important;
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+    background: var(--button);
+}
+
+.fullSyncIndicator {
+    color: #fff;
+}
+
+.mainDrawer,
+.drawer-open {
+    background-color: #101010;
+}
+
+.navMenuOption:hover {
+    background: #252528;
+}
+
+.navMenuOption-selected {
+    background: var(--select) !important;
+    color: #fff;
+}
+
+.emby-button.show-focus:focus {
+    background: var(--select);
+    color: #fff;
+}
+
+.emby-tab-button {
+    color: #999;
+}
+
+.emby-tab-button-active {
+    color: #fff;
+}
+
+.emby-tab-button.show-focus:focus {
+    color: var(--select);
+}
+
+.emby-tab-button:hover {
+    color: var(--hover);
+}
+
+.channelPrograms,
+.guide-channelHeaderCell,
+.programCell {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.programCell-sports {
+    background: #3949ab !important;
+}
+
+.programCell-movie {
+    background: #5e35b1 !important;
+}
+
+.programCell-kids {
+    background: #039be5 !important;
+}
+
+.programCell-news {
+    background: #43a047 !important;
+}
+
+.programCell-active {
+    background: #1e1e1e !important;
+}
+
+.guide-channelHeaderCell:focus,
+.programCell:focus {
+    background-color: #00a4dc !important;
+    color: #fff !important;
+}
+
+.guide-programTextIcon {
+    color: #1e1e1e;
+    background: #555;
+}
+
+.guide-headerTimeslots {
+    color: inherit;
+}
+
+.guide-date-tab-button {
+    color: #555;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus {
+    color: #00a4dc;
+}
+
+.guide-date-tab-button.show-focus:focus {
+    background-color: #00a4dc;
+    color: #fff;
+}
+
+.infoBanner {
+    color: #ddd;
+    background: #111;
+    padding: 1em;
+    border-radius: 0.25em;
+}
+
+.ratingbutton-icon-withrating {
+    color: var(--button);
+}
+
+.downloadbutton-icon-complete,
+.downloadbutton-icon-on {
+    color: var(--button);
+}
+
+.playstatebutton-icon-played {
+    color: var(--button)l
+}
+
+.buttonActive {
+    color: var(--select) !important;
+}
+
+.card:focus .cardBox.visualCardBox,
+.card:focus .cardBox:not(.visualCardBox) .cardScalable {
+    border-color: var(--text) !important;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #3b3b3b;
+}
+
+.layout-desktop ::-webkit-scrollbar,
+.layout-tv ::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+}
+
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical {
+    border-radius: 2px;
+    background: center no-repeat #888;
+}
+
+.timeslotHeaders-desktop::-webkit-scrollbar {
+    height: 0.7em;
+}
+
+.metadataSidebarIcon {
+    color: var(--button);
+}
+
+.emby-button.detailFloatingButton {
+    background-color: var(--button);
+    color: #fff;
+}
+
+.layout-tv .emby-button.detailFloatingButton:focus {
+    background-color: #f2f2f2;
+    color: var(--select);
+}
+
+#comicsPlayer,
+#bookPlayer,
+#pdfPlayer {
+    background: #101010;
+}
+
+#comicsPlayer .swiper-pagination {
+    background: #101010;
+    color: #fff;
+}
+
+#bookPlayer .topButtons {
+    color: #fff;
+}
+
+#comicsPlayer .actionButtonIcon,
+#pdfPlayer .actionButtonIcon {
+    color: #fff;
+}
+
+#dialogToc {
+    background-color: #101010;
+}
+
+#dialogToc .bookplayerButtonIcon {
+    color: #ccc;
+}
+
+#dialogToc .bookplayerButtonIcon:hover {
+    color: #00a4dc;
+}
+
+#dialogToc .toc li a:link {
+    color: #ccc;
+}
+
+#dialogToc .toc li a:active,
+#dialogToc .toc li a:hover {
+    color: var(--button);
+}
+
+/*Rounded corners*/
+.cardContent-button, 
+.cardContent-shadow, 
+.itemDetailImage,  
+.cardOverlayButton-hover,
+.cardOverlayContainer,
+.cardImageContainer,
+.cardPadder,
+.listItemImage,
+.listItemImageButton,
+.listItemButton,
+.headerButton,
+.paper-icon-button-light,
+.innerCardFooter,
+.blurhash-canvas,
+.actionSheetMenuItem:hover,
+.dialog
+{border-radius: 6px !important;}
+
+/*Minimalistic play buttons*/
+.cardOverlayFab-primary {background-color: #00000000;}
+.cardOverlayButtonIcon {background-color: #00000000 !important;}
+.cardOverlayContainer {background-color: rgba(0, 0, 0, 0.7);}
+
+/*Tweak entry fields*/
+.selectContainer {margin-right: 1em !important;}
+.checkboxOutline {border-radius: 6px; background-color: rgba(0, 0, 0, 0.5);}
+.emby-input, .emby-textarea, .emby-select-withcolor 
+{background: rgba(0, 0, 0, 0.5); border: 0.01em solid rgba(255, 255, 255, 0.22); border-radius: 6px;}
+.emby-input:focus, .emby-textarea:focus, .emby-select-withcolor:focus 
+{background: rgba(0, 0, 0, 0.5); border: 0.01em solid var(--selectdark);}
+.trackSelections {max-width: 22em;}
+
+/* Description: Crunchyroll subtitle style */
+.htmlvideoplayer::cue {
+    font-family: Trebuchet MS !important; 
+    color: white !important; /* Text color */
+    text-shadow:
+        calc(4px * 1) calc(4px * 0) 0 black
+        calc(4px * 0.9239) calc(4px * 0.3827) 0 black,
+        calc(4px * 0.7071) calc(4px * 0.7071) 0 black,
+        calc(4px * 0.3827) calc(4px * 0.9239) 0 black,
+        calc(4px* 0) calc(4px * 1) 0 black,
+        calc(4px * -0.3827) calc(4px * 0.9239) 0 black,
+        calc(4px * -0.7071) calc(4px* 0.7071) 0 black,
+        calc(4px * -0.9239) calc(4px * 0.3827) 0 black,
+        calc(4px * -1) calc(4px* 0) 0 black,
+        calc(4px* -0.9239) calc(4px * -0.3827) 0 black,
+        calc(4px* -0.7071) calc(4px * -0.7071) 0 black,
+        calc(4px * -0.3827) calc(4px* -0.9239) 0 black,
+        calc(4px * 0) calc(4px * -1) 0 black,
+        calc(4px * 0.3827) calc(4px * -0.9239) 0 black,
+        calc(4px* 0.7071) calc(4px * -0.7071) 0 black,
+        calc(4px * 0.9239) calc(4px * -0.3827) 0 black,
+        calc(4px * 0.5) calc(4px * 0.866) 0 black,
+        calc(4px* 0.866) calc(4px * 0.5) 0 black,
+        calc(4px* 0.5) calc(4px * -0.866) 0 black,
+        calc(4px * -0.5) calc(4px * -0.866) 0 black,
+        calc(4px* -0.866) calc(4px * -0.5) 0 black,
+        calc(4px * -0.5) calc(4px * 0.866) 0 black,
+        calc(4px* 0.866) calc(4px * -0.5) 0 black,
+        calc(4px * -0.866) calc(4px * 0.5) 0 black,
+        calc(4px + 2px) calc(4px + 2px) 15px black !important;
+}
+
+/*Blurred Media Player*/
+.osdHeader {
+    background: var(--video-controlpanel-background) !important;
+    -webkit-backdrop-filter: blur(var(--video-controlpanel-blur-amount)) brightness(var(--video-controlpanel-brightness-amount));
+    backdrop-filter: blur(var(--video-controlpanel-blur-amount)) brightness(var(--video-controlpanel-brightness-amount));
+}
+.videoOsdBottom{
+    background: var(--video-controlpanel-background) !important;
+    -webkit-backdrop-filter: blur(var(--video-controlpanel-blur-amount)) brightness(var(--video-controlpanel-brightness-amount));
+    backdrop-filter: blur(var(--video-controlpanel-blur-amount)) brightness(var(--video-controlpanel-brightness-amount));
+}
+
+/*Login Page Margin*/
+#loginPage .padded-left.padded-right.padded-bottom-page {margin-top: 10px}
+
+/* Header*/
+.skinHeader-withBackground {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 6.25%, rgba(0, 0, 0, 0.83) 12.5%, rgba(0, 0, 0, 0.82) 18.75%, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.77) 31.25%, rgba(0, 0, 0, 0.73) 37.5%, rgba(0, 0, 0, 0.69) 43.75%, rgba(0, 0, 0, 0.64) 50%, rgba(0, 0, 0, 0.58) 56.25%, rgba(0, 0, 0, 0.52) 62.5%, rgba(0, 0, 0, 0.45) 68.75%, rgba(0, 0, 0, 0.37) 75%, rgba(0, 0, 0, 0.29) 81.25%, rgba(0, 0, 0, 0.2) 87.5%, rgba(0, 0, 0, 0.1) 93.75%, rgba(0, 0, 0, 0) 100% );
+	position: absolute;
+}
+
+.headerTabs.sectionTabs {text-size-adjust: 110%;  font-size: 110%;}
+
+.skinHeader.semiTransparent {
+	background: transparent;
+}
+
+.emby-tab-button {
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 600;
+	height: auto;
+	line-height: 1.25;
+	margin: 0;
+	min-width: 0;
+	min-width: auto;
+	outline: none;
+	overflow: hidden;
+	padding: 1.5em 1.5em;
+	position: relative;
+	vertical-align: middle;
+	width: auto;
+	text-transform: uppercase;
+}
+
+.emby-select-withcolor > option {
+  color: inherit;
+  background: #000 !important;
+}
+
+/*Video Page Background Tweaks*/
+.detailPagePrimaryContainer {background: rgba(0,0,0,0) !important;}
+@media all and (min-width: 100em){
+    .itemBackdrop::after {background-color: rgba(0, 0, 0, 0) !important;}
+    .itemBackdrop {height: 23vh !important; background-image: none !important;}
+}
+@media all and (min-width: 32em) and (max-width: 100em){
+    .itemBackdrop::after {background-color: rgba(0, 0, 0, 0) !important;}
+    .itemBackdrop {height: 10em !important; background-image: none !important;}
+}
+@media all and (max-width: 32em) {
+    .itemBackdrop {width: 100vw !important; height: 100vh !important; position: fixed; filter: brightness(14%);}
+    .detailPageWrapperContainer {margin-top: 5em;}
+}
+
+
+/*Theme some dialogues*/
+.dialog {background-color: rgba(0, 0, 0, 0.9);}
+.actionSheetMenuItem:hover {background-color: var(--hover, 0.2);}
+.mainDrawer {background-color: rgba(0, 0, 0, 0.9);}
+.navMenuOption:hover {background:var(--hover 0.2);}
+
+/*My Media Sections Shape*/
+.layout-desktop #indexPage .homeLibraryButton {
+	min-width: 13.65em;
+	margin-top: 0.5em !important;
+	margin-right: 1.46em !important;
+	margin-bottom: 0.5em !important;
+	margin-left: 0.5em !important;
+}
+
+.layout-desktop .verticalSection.section0.emby-scroller-container .emby-scrollbuttons.padded-right {
+	top: -3em !important;
+}
+
+.layout-desktop #indexPage .card.overflowBackdropCard.card-hoverable.card-withuserdata,
+.card.overflowSquareCard.card-hoverable {
+	width: 15.6em;
+}
+
+.layout-desktop #homeTab .homeLibraryText {
+	font-size: 1.1em;
+	font-weight: 700 !important;
+	text-transform: uppercase;
+}
+
+.layout-desktop #homeTab .raised.homeLibraryButton.emby-button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-left: 0.25em !important;
+	margin-right: 1.20666em !important;
+	min-width: 14.15em !important;
+}
+
+.layout-desktop #homeTab .homeLibraryIcon {
+	display: none;
+}
+
+/*Make page titles uppercase*/
+.pageTitle {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.3em;
+}
+
+.layout-desktop .pageTitle {
+	margin-top: -0.1em !important;
+}
+
+
+/*Position Logos*/
+.detailLogo {
+	position: absolute;
+	left: 15em;
+	display: block;
+	filter: drop-shadow(15px 14px 4px rgba(2, 2, 2, 0.65));
+	width: 50em;
+	height: 10em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding: 0;
+}
+
+
+/*Smaller Cast Lists*/
+/*Shrink and square (or round) cast thumnails*/
+@media all and (min-width: 131.25em){
+    #castContent .card.overflowPortraitCard {
+      width: 6.3vw !important; 
+      font-size: 90% !important;
+    }
+  }
+  @media all and (min-width: 120em) and (max-width: 131.25em){
+    #castContent .card.overflowPortraitCard  {
+      width: 6.4vw !important; 
+      font-size: 90% !important;
+    }
+  }
+  @media all and (min-width: 100em) and (max-width: 120em){
+    #castContent .card.overflowPortraitCard{
+      width: 7.6vw !important; 
+      font-size: 90% !important;
+    }
+  }
+  @media all and (min-width: 100em) and (max-width: 120em){
+    #castContent .card.overflowPortraitCard {
+      width: 7.6vw !important; 
+      font-size: 90% !important;
+    }
+  }
+
+  @media all and (min-width: 87.5em) and (max-width: 100em){
+    #castContent .card.overflowPortraitCard{
+      width: 9.3vw !important; 
+      font-size: 90% !important;
+    }
+  }
+  @media all and (min-width: 75em) and (max-width: 87.5em){
+    #castContent .card.overflowPortraitCard {
+      width: 10.5vw !important; 
+      font-size: 90% !important;
+    }
+  }
+  @media all and (min-width: 50em) and (max-width: 75em){
+    #castContent .card.overflowPortraitCard {
+      width: 15vw !important;
+      font-size: 90% !important;
+    }
+  }
+
+  @media all and (min-width: 43.75em) and (max-width: 50em){
+    #castContent .card.overflowPortraitCard {
+      width: 20.1vw !important; 
+      font-size: 90% !important;
+    }
+  }
+
+  @media all and (min-width: 25em) and (max-width: 43.75em){
+    #castContent .card.overflowPortraitCard{
+      width: 31.2vw !important; 
+      font-size: 90% !important;
+    }
+  }
+
+  @media all and (max-width: 25em){
+    #castContent .card.overflowPortraitCard  {
+      width: 40vw !important; 
+      font-size: 90% !important;
+    }
+  }
+
+  
+  .cardPadder {
+    background-color: #0000 !important; box-shadow: none !important;
+  }
+  
+  /*Correct image aspect ratio behaviour, set border-radius to zero for square tiles*/
+  
+  @media all and (min-width: 131.25em){
+    #castContent .cardScalable{
+      width: calc(6.3vw - 0.6em) !important; 
+      height: calc(6.3vw - 0.6em) !important;
+    }
+  }
+
+
+  @media all and (min-width: 120em) and (max-width: 131.25em){
+    #castContent .cardScalable{
+      width:  calc(6.4vw - 0.6em) !important; 
+      height: calc(6.4vw - 0.6em) !important;
+    }
+  }
+
+  @media all and (min-width: 100em) and (max-width: 120em){
+    #castContent .cardScalable {
+      width:  calc(7.6vw - 0.6em) !important; 
+      height: calc(7.6vw - 0.6em) !important;
+    }
+  }
+
+  @media all and (min-width: 87.5em) and (max-width: 100em){
+    #castContent .cardScalable{
+      width:  calc(9.3vw - 0.6em) !important; 
+      height: calc(9.3vw - 0.6em) !important;
+    }
+  }
+ 
+
+  @media all and (min-width: 75em) and (max-width: 87.5em){
+    #castContent .cardScalable {
+      width:  calc(10.5vw - 0.6em) !important; 
+      height: calc(10.5vw - 0.6em) !important;
+    }
+  }
+
+
+  @media all and (min-width: 50em) and (max-width: 75em){
+    #castContent .cardScalable  {
+      width:  calc(15vw - 0.6em) !important; 
+      height: calc(15vw - 0.6em) !important;
+    }
+  }
+  @media all and (min-width: 43.75em) and (max-width: 50em){
+    #castContent .cardScalable {
+      width:  calc(20.1vw - 0.6em) !important; 
+      height: calc(20.1vw - 0.6em) !important;
+    }
+  }
+
+  @media all and (min-width: 25em) and (max-width: 43.75em){
+    #castContent .cardScalable{
+      width:  calc(31.2vw - 0.6em) !important; 
+      height: calc(31.2vw - 0.6em) !important;
+    }
+  }
+
+
+  @media all and (max-width: 25em){
+    #castContent .cardScalable{
+      width:  calc(40vw - 0.6em) !important;
+      height: calc(40vw - 0.6em) !important;
+    }
+  }
+
+.detailRibbon {
+    background: unset;
+}
+/*Position Synopsis, Studios, Links etc to the left and set their width*/
+.layout-desktop .detailPageContent,
+.layout-desktop .detailPagePrimaryContainer {
+  padding-left: 5%;
+}
+.layout-desktop .detailPagePrimaryContent {
+  width: 45%;
+}
+
+/*Move the title, buttons, year, and ratings section to the left, with the three rows inline with each other*/
+.layout-desktop .detailPagePrimaryContainer {
+    display: inline-table;
+    z-index: 2;
+    left: 5%;
+  }
+    /*Spaces out cast list and adjusts font*/
+    .layout-desktop #castContent .card.overflowPortraitCard,
+    .layout-desktop #guestCastContent .card.overflowPortraitCard {
+      font-size: 95% !important;
+      width: 13.6em !important;
+    }
+    .layout-tv #castContent .card.overflowPortraitCard {
+      font-size: 90% !important;
+      width: 13em !important;
+      margin-left: -1.6vw !important;
+      height:
+       30vh;
+    }
+
+    .btnReplay .detailButton-content:after {
+        content: "Replay";
+    }
+    
+    .btnDownload .detailButton-content:after {
+        content: "Download";
+    }
+    
+    .btnPlayTrailer .detailButton-content:after {
+        content: "Trailer";
+    }
+    
+    .btnInstantMix .detailButton-content:after {
+        content: "Instant Mix";
+    }
+    
+    .btnShuffle .detailButton-content:after {
+        content: "Shuffle";
+    }
+    
+    .btnCancelSeriesTimer .detailButton-content:after {
+        content: "Cancel Programme";
+    }
+    
+    .btnCancelTimer .detailButton-content:after{
+        content: "Stop Recording";
+    }
+    
+    .btnPlaystate .detailButton-content:after {
+        content: "Watched";
+    }
+    
+    .btnUserRating .detailButton-content:after {
+        content: "Favourite";
+    }
+    
+    .btnSplitVersions .detailButton-content:after {
+        content: "Split Versions";
+    }
+    
+    .btnMoreCommands .detailButton-content:after {
+        content: "Options";
+    }
+    
+      .layout-desktop .mainDetailButtons {
+        width: auto;
+      }
+/*Make Name Bold*/
+.readOnlyContent h2,
+.sectionTitle,
+.dashboardSection h3,
+.MuiListSubheader-root {
+    font-weight: bold;
+}
+/*Narrow User Settings, remove weird borders, and position them inline*/
+.listItem-border,
+.itemSelectionPanel {
+    border: unset;
+}
+.listItem {
+    padding-left: 1.2em !important;
+}
+
+/*Round menu items*/
+.listItem:hover,
+.MuiButtonBase-root,
+.MuiButtonBase-root:hover,
+.emby-tab-button,
+progress 
+.emby-input,
+.emby-textarea,
+.paperList,
+.subtitleappearance-preview {
+    border-radius: 10px !important;
+}
+/*Round Buttons*/
+.button-submit,
+.emby-select,
+.checkboxOutline,
+.btnRefresh,
+#btnShutdown,
+.raised {
+    border-radius: 80px !important;
+}
+
+/* Remove border under certain dashboard items */
+.listItem-border {
+    border: 0 !important;
+}
+/* Add padding to list items */
+.layout-desktop .listItem,
+.layout-tv .listItem {
+    padding-inline: 15px !important;
+}
+/* Settings and dashboard modifications */
+/* Rounded dashboard cards */
+.cardBox {
+    border-radius: 10px !important;
+}
+
+#libraryDisplayPage,
+#metadataImagesConfigurationPage,
+#metadataNfoPage {
+    margin-top: 40px !important;
+}
+#mediaLibraryPage {
+    margin-top: 10px !important;
+}
+
+
+/* Re-align active devices in dashboard */
+.activeDevices.itemsContainer {
+    margin: 0px !important;
+}
+
+/* Dashboard fixes for 10.9.x */
+.layout-desktop #userProfilesPage {
+    left: 260px !important;
+}
+
+.MuiDataGrid-root.MuiDataGrid-withBorderColor {
+    border-radius: 10px !important;
+}
+.infoBanner {
+    border-radius: 10px  !important;
+}
+.MuiToggleButton-root.MuiToggleButtonGroup-groupedHorizontal {
+    border-radius: 10px ;
+    padding-inline: 15px !important;
+}
+.MuiAppBar-root.MuiAppBar-positionFixed {
+    padding: 10px !important;
+}
+
+.MuiList-root.MuiList-subheader {
+    padding-left: 10px !important;
+}
+
+.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters {
+    border-radius: 100px !important;
+    margin: 2px 0px !important;
+    transition: .2s !important;
+    height: 45px !important
+}
+
+.MuiPaper-root.MuiPopover-paper {
+    background: #252525 !important;
+    color: #D1D1D1 !important;
+    border-radius: 10px  !important;
+}
+
+.MuiCollapse-root.MuiCollapse-vertical .MuiListItemButton-root.MuiListItemButton-gutters {
+    width: 85% !important;
+    margin-inline: auto !important;
+    padding: 8px 16px !important;
+}
+
+
+/*Size episode preview images in a more compact way*/
+.childrenItemsContainer.itemsContainer.padded-right.vertical-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  @media all and (min-width: 2000px) {
+    .listItemImage-large {
+      max-height:100%;
+    }
+  }
+  
+  @media all and (max-width: 2000px) {
+    .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media all and (max-width: 1000px) {
+    .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .layout-mobile
+    .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
+    grid-template-columns: 1fr;
+  }
+  
+  #itemDetailPage .listItem-content {
+    border-radius: 5px;
+    overflow: hidden;
+    transition: background 0.15s ease-in-out;
+    flex-flow: column;
+    -webkit-transition: background 0.15s ease-in-out;
+    -moz-transition: background 0.15s ease-in-out;
+    -ms-transition: background 0.15s ease-in-out;
+    -o-transition: background 0.15s ease-in-out;
+  }
+  
+  .listItemImage.listItemImage-large
+ {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin: 0;
+  }
+  
+  .listItem-overview.listItemBodyText {
+    height: 5.5em !important;
+    font-size: 1em !important;
+  }
+  
+  .layout-mobile .listItemImageButton-icon {
+    padding: 0;
+    top: 0.34em;
+    position: absolute !important;
+    font-size: 1.5em !important;
+    right: 3em;
+  }
+  
+  #itemDetailPage .listItem {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 10pt;
+    padding: .5em;
+  }
+  
+  #itemDetailPage .secondary.listItem-overview.listItemBodyText {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .listItem[data-mediatype="Audio"] {
+    padding: 0 1em;
+    border-radius: var(--rounding) !important;
+    -webkit-border-radius: var(--rounding) !important;
+    -moz-border-radius: var(--rounding) !important;
+    -ms-border-radius: var(--rounding) !important;
+    -o-border-radius: var(--rounding) !important;
+  }
+  
+  .layout-mobile #itemDetailPage .listItemImageButton {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    color: white;
+  }
+  
+  .layout-mobile .listItemIndicators {
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
+  
+  .layout-mobile .playedIndicator {
+    width: 2em;
+    height: 2em;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: none;
+  }
+  
+  .layout-mobile .listItemIndicators .indicatorIcon.check {
+    z-index: 2;
+  }
+  
+  .layout-mobile .listItemBodyText {
+    max-width: 36vw;
+  }
+  
+  @media all and (min-width: 50em) {
+    .layout-mobile .listItemBodyText {
+      max-width: 100%;
+    }
+  }
+  
+  .layout-mobile .listItem .playedIndicator {
+    background: transparent !important;
+    color: rgba(var(--accent));
+  }
+  
+  .layout-mobile .listItemImage {
+    height: auto !important;
+    width: 100% !important;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10pt important;
+  }
+  
+  .layout-mobile  .listItemImageButton:hover {
+      transform: scale(1);
+  }
+  
+  .layout-mobile .listViewUserDataButtons {
+    position: absolute;
+    right: 0;
+    top: 1.25em;
+    padding-right: 1em;
+  }
+  
+  .layout-mobile .listItemButton {
+    padding: 0 0.556em !important;
+  }
+  
+  .layout-mobile #itemDetailPage .listItem-content {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    align-items: flex-start;
+  }
+  
+  .layout-mobile #itemDetailPage .listItem-content {
+    background: none !important;
+    position: unset;
+    color: white;
+  }
+  
+  .listItemImageButton {
+    margin: auto;
+    font-size: 1.6em !important;
+  }
+  .listItemBody.itemAction,
+  .listItem-bottomoverview.secondary{
+    z-index: 1;
+  }
+  .listItem-bottomoverview.secondary{
+    text-align: justify;
+    padding: .5em;
+    margin: 0;
+  }
+
+/* Metadata editor fixes */
+.layout-desktop .editPageSidebar {
+    width: 25vw !important;
+}
+.layout-desktop .editPageInnerContent {
+    width: 74vw !important;
+}
+.jstree-default-large .jstree-node {
+    line-height: 35px !important;
+}
+
+.jstree-children {
+    margin-left: -10px !important;
+}
+/*My Media Colours*/
+.fab,
+.raised {
+	background: #303030;
+	color: var(--text);
+}
+/*Dialog Box*/
+@media (min-width: 80em) and (min-height: 45em) {
+    .dialog-small {
+        cursor: not-allowed;
+        bottom: 0 !important;
+        box-shadow: none;
+        height: auto !important;
+        left: 0 !important;
+        margin: 0 !important;
+        position: fixed !important;
+        right: 0 !important;
+        top: 0 !important;
+        width: auto !important;
+    }
+}
+/*Player Setup*/
+/* hide ratings in bottom player*/
+.osdRatingsText > .starRatingContainer {
+    display: none;
+}
+
+/* hide icons in right top/bottom player*/
+.paper-icon-button-light 
+    &.headerSyncButton,
+    &.headerCastButton,
+    &.btnUserRating,
+    &.btnPip {
+        display: none;
+    }
+
+
+/* show time ends at on mobile*/
+@media (max-width: 75em) {
+    .videoOsdBottom .endsAtText {
+        display: unset !important;
+    }
+}
